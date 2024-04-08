@@ -2,8 +2,9 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.indexDash, name='dashboard'),
-    path('relatorio', views.relatorio, name='relatorio'),
-    path('settings', views.settings, name='settings'),
-    path('help', views.help, name='help')
+    # Esta rota (dashboard) pode ser protegida por autenticação para garantir que apenas usuários logados possam acessar o dashboard.
+    path("", views.indexDashboardView, name="dashboard"),
+    # path("relatorio", views.relatorioView, name="relatorio"),
+    path("settings", views.settingsView, name="settings"),
+    path("help", views.helpView, name="help"),
 ]
