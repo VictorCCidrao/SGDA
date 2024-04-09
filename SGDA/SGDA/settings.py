@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "autenticacao",
     "cardapio",
     "dashboard",
+    "landingpage",
     "refeicao_request",
     "refeicoes",
     "relatorios",

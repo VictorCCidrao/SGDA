@@ -24,8 +24,8 @@ class Aluno(models.Model):
     matricula = models.CharField(max_length=100, unique=True)
 
 
-class Admin(models.Model):
+class Nutricionista(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.DO_NOTHING
     )  # ForeingKey é a chave estrangeira da tabela USER, ou seja, pelo atributo "user" consigo acessar todos os outros da tabela User. ex: user.email
-    matricula = models.CharField(max_length=100, unique=True)
+    # matricula = models.CharField(max_length=100, unique=True)
