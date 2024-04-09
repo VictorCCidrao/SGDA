@@ -1,0 +1,18 @@
+COMMIT - 07/04 à 09/04/
+DID: 
+	caso o usuario esteja no model Aluno, a rota "home/" renderiza "dashboard_aluno"
+	caso o usuario esteja no model Nutricionista, a prota "home/" renderiza "dashboard_admin"
+	criado aplicação landingpage (rotas/templates)
+	modificado rotas de autenticação ("a/login", "a/register")
+	caso o usuario nao esteja logado, a rota "home/" redireciona a rota "a/login/"
+	-------------------------------------------
+	Sistema de cadastro
+	criado forms.py (Classe de criar Usuario)
+	criado template "register.html" e "register_success.html"
+	criado rotas
+	Criado sistema de Login
+
+TO DO: 
+	customizar templates
+	Arrumar: /home/ não renderiza templates para quem não está em uma tabela(modelo Aluno/Nutricionista)
+	
