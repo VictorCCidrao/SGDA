@@ -6,8 +6,8 @@ from autenticacao.models import Aluno, Nutricionista
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    img = models.ImageField(upload_to="profile_pics", blank=True, null=True)  
+    user = models.OneToOneField(User, on_delete=models.DO_NOTHING)
+    img = models.ImageField(upload_to="profile_pics", blank=True, null=True)
 
     def is_aluno(self):
         return Aluno.objects.filter(user=self.user).exists()

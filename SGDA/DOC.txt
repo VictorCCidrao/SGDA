@@ -1,0 +1,56 @@
+TO DO:
+	CUSTOMIZAR TEMPLATES:
+		LandingPage
+		Login
+		Register
+		RegisterSuccess
+		Home/Dashboard(Aluno/Admin)
+		Help
+		Settings
+
+---------------------------------------------------------------------------------------------
+
+COMMIT - 07/04 à 09/04/
+DID: 
+	caso o usuario esteja no model Aluno, a rota "home/" renderiza "dashboard_aluno"
+	caso o usuario esteja no model Nutricionista, a prota "home/" renderiza "dashboard_admin"
+	criado aplicação landingpage (rotas/templates)
+	modificado rotas de autenticação ("a/login", "a/register")
+	caso o usuario nao esteja logado, a rota "home/" redireciona a rota "a/login/"
+	-------------------------------------------
+	Sistema de cadastro
+	criado forms.py (Classe de criar Usuario)
+	criado template "register.html" e "register_success.html"
+	criado rotas
+	Criado sistema de Login
+
+---------------------------------------------------------------------------------------------
+
+COMMIT - 11/04
+	DID: 
+		Novo usuário vai pra tabela aluno.
+		Instalado Pylint-django
+		Criado diretório media para upload de arquivos do usuario.
+			MEDIA_ROOT
+			MEDIA_URL
+		
+		Só é possível fazer registro se o aluno informar matrícula válida do arquivo media/matriculas.xlsx
+			Instalado openpyxl
+			Instalado pandas
+			Adicionado campo de informar matricula no Forms.py e register.html
+			Criado método de validação de matrícula por arquivo xlsx (media/matriculas.xlsx).
+			Validação de matrícula verificada no registerView
+		
+		Caso matricula seja inválida
+			cria alert abaixo do form em register.html
+		
+		Modificado model Aluno:
+			criado atributo "nome_completo"
+
+		Criado método para obter nome do arquivo .xlsx e adicionar no model Aluno nome_completo:
+			matricula informada no registerForm é adicionada ao atributo matricula de Aluno.
+
+		Ele está identificando o arquivo matrículas.xlsx, suspeito que o motivo seja a confusão de string para int, então vou ter que fazer aquilo que fiz no teste.py
+			o problema era esse aí mesmo 👆 (FIXED)
+
+	

@@ -19,13 +19,14 @@ from django.contrib.auth.models import User
 
 class Aluno(models.Model):
     user = models.ForeignKey(
-        User, on_delete=models.DO_NOTHING
+        User, on_delete=models.CASCADE
     )  # ForeingKey é a chave estrangeira da tabela USER, ou seja, pelo atributo "user" consigo acessar todos os outros da tabela User. ex: user.email
     matricula = models.CharField(max_length=100, unique=True)
+    nome_completo = models.CharField(max_length=100, default="", blank=True, null=True)
 
 
 class Nutricionista(models.Model):
     user = models.ForeignKey(
-        User, on_delete=models.DO_NOTHING
+        User, on_delete=models.CASCADE
     )  # ForeingKey é a chave estrangeira da tabela USER, ou seja, pelo atributo "user" consigo acessar todos os outros da tabela User. ex: user.email
     # matricula = models.CharField(max_length=100, unique=True)
